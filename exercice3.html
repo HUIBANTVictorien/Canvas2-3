@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercice 3 partie 2 canvas</title>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400">
+  </canvas>
+  <script>
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  //Tête
+  ctx.beginPath();
+  ctx.fillStyle = "#976f0f";
+  ctx.arc(200,120,37,0,Math.PI*2);
+  ctx.fill();
+  //Bras droit
+  ctx.beginPath();
+  ctx.fillStyle = '#976f0f';
+  ctx.moveTo(70,150);
+  ctx.lineTo(330,150);
+  ctx.quadraticCurveTo(350,165,330,180);
+  //Jambe droite
+  ctx.lineTo(237,180);
+  ctx.lineTo(237,340);
+  ctx.quadraticCurveTo(220,348,207,340);
+  //jambe gauche
+  ctx.lineTo(207,290);
+  ctx.quadraticCurveTo(200,280,195,290);
+  ctx.lineTo(195,340);
+  ctx.quadraticCurveTo(178,350,163,340);
+  //bras gauche
+  ctx.lineTo(163,180);
+  ctx.lineTo(70,180);
+  ctx.quadraticCurveTo(50,165,70,150);
+  ctx.fill();
+  //bouttons
+  ctx.beginPath();
+  ctx.fillStyle = "#7a2976";
+  ctx.arc(200,190,7,0,Math.PI*2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.fillStyle = "#7a2976";
+  ctx.arc(200,220,7,0,Math.PI*2);
+  ctx.fill();
+  //Bouche
+  ctx.beginPath();
+  ctx.strokeStyle = "red";
+  ctx.moveTo(185,133);
+  ctx.quadraticCurveTo(200,138,215,133);
+  ctx.quadraticCurveTo(200,148,185,133);
+  ctx.stroke();
+  //Yeux
+  ctx.beginPath();
+  ctx.fillStyle = "white";
+  ctx.arc(190,115,5,0,Math.PI*2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.fillStyle = "white";
+  ctx.arc(210,115,5,0,Math.PI*2);
+  ctx.fill();
+  //Sourciles
+  ctx.beginPath();
+  ctx.strokeStyle = "white";
+  ctx.moveTo(185,105);
+  ctx.quadraticCurveTo(190,100,195,105);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.strokeStyle = "white";
+  ctx.moveTo(205,105);
+  ctx.quadraticCurveTo(210,100,215,105);
+  ctx.stroke();
+  </script>
+</body>
+</html>
